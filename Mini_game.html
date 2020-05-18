@@ -23,7 +23,22 @@
     
 <div class="jumbotron jumbotron-fluid " align="center" >
    <div align="left">
-                <a href="index.html" ><button  type="button"  class="btn btn-dark" align="left" >Главное меню</button></a>
+    <div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <a href="index.html" ><button  type="button"  class="btn btn-dark" align="left" >Главное меню</button></a>
+    </div>
+    <div class="col-sm">
+      
+       
+    </div>
+    <div class="col-sm">
+      
+       
+    </div>
+  </div>
+</div>
+              
                 </div>
     <!--сюда банк-->
 <div class="card" style="width: 40rem;" >
@@ -40,14 +55,14 @@
   <input class="btn btn-dark" type="button" id="confirmDeposit" onclick="confDeposit()" value="Подтвердить">
   <br>
   <br>
-  Внесенный депозит: <input type="text" class="form-control mb-0 mr-sm-2" align="center" id = "deposit_saved" disabled="true">
+  Ваш счёт: <input type="text" class="form-control mb-0 mr-sm-2" align="center" id = "deposit_saved" disabled="true">
       </div>
     </div>
   </div>
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
-        Сделайтте ставку: <input type="number" class="form-control mb-0 mr-sm-3" id="stavka_input" > 
+        Сделайте ставку: <input type="number" class="form-control mb-0 mr-sm-3" id="stavka_input" > 
     <br>
   <input  type="button" id="confirmDeposit" class="btn btn-dark" onclick="confStavka()" value="Подтвердить">
   <br>
@@ -64,22 +79,13 @@
   
 
 
-
-
-
-
-
-
-
-
     </div>
   
  
 
- <div class="container">
+ <div class="container" align="center">
   <br><br>
-    <h1 class="display-4">Угадай число</h1>
-    <h2 class="lead">Моя программа загадала число от 1 до 9. Угадай какое!!!</h2>
+    
 </div>
 <br>
 
@@ -95,7 +101,17 @@
       
     </div>
     <div class="col-md-auto">
+       <div class="container">
+  <br><br>
+    
+</div>
+<div>
+      <p class="display-4" align="left">Угадай число</p>
+    <p class="lead" align="left">Моя программа загадала число от 1 до 9. </p>
+    <p class="lead" align="left">Угадай какое!!!</p>
+ </div>
       <p>Выберете число </p>
+
       <input type="button" class="btn btn-dark" value="1" onclick="selectedNumber(1)">
 
                 <input type="button" class="btn btn-dark" value="2" onclick="selectedNumber(2)">
@@ -121,6 +137,7 @@
                                function selectedNumber(k) {
                                                document.getElementById("Selected_value").value = k;
                                                Selected_val = k;
+                                               
                                }
 
                                function generateNumber(min, max) {
@@ -134,6 +151,8 @@
           document.getElementById("deposit_saved").value = deposit_value;
           document.getElementById("stavka_saved").value = "";
           document.getElementById("randomResult").value = number_value;
+          
+          document.getElementById("Selected_value").value = "";
                                                
                                                }
                                                else {
@@ -142,6 +161,8 @@
           document.getElementById("deposit_saved").value = deposit_value;
           document.getElementById("stavka_saved").value = "";
           document.getElementById("randomResult").value = number_value;
+          
+          document.getElementById("deposit_value").value = "";
                                                }
                                }
 
